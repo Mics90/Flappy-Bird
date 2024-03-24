@@ -35,6 +35,8 @@
             this.flappyBird = new System.Windows.Forms.PictureBox();
             this.pipeTop = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.restartGame = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipeBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
@@ -103,6 +105,32 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
+            // restartGame
+            // 
+            this.restartGame.BackColor = System.Drawing.Color.LimeGreen;
+            this.restartGame.Font = new System.Drawing.Font("Niagara Engraved", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartGame.Location = new System.Drawing.Point(615, 462);
+            this.restartGame.Name = "restartGame";
+            this.restartGame.Size = new System.Drawing.Size(323, 159);
+            this.restartGame.TabIndex = 5;
+            this.restartGame.Text = "Restart Game!";
+            this.restartGame.UseVisualStyleBackColor = false;
+            this.restartGame.Visible = false;
+            this.restartGame.Click += new System.EventHandler(this.restartTheGame);
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Crimson;
+            this.exit.Font = new System.Drawing.Font("Niagara Engraved", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exit.Location = new System.Drawing.Point(615, 616);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(323, 159);
+            this.exit.TabIndex = 6;
+            this.exit.Text = "Exit!";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Visible = false;
+            this.exit.Click += new System.EventHandler(this.exitTheGame);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -110,6 +138,8 @@
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1531, 1262);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.restartGame);
             this.Controls.Add(this.pipeBottom);
             this.Controls.Add(this.scoreText);
             this.Controls.Add(this.ground);
@@ -140,6 +170,8 @@
         private System.Windows.Forms.PictureBox ground;
         private System.Windows.Forms.Label scoreText;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Button restartGame;
+        private System.Windows.Forms.Button exit;
     }
 }
 
